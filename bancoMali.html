@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Banco DEV.F</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Ayuda</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link disabled"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center pt-5 text-white">Cajero Automatico</h1>
+                    <div class="card rounded-3 my-5 p-3">
+                        <div class="card-body">
+                            <form for="form-busqueda" action="">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="inputNombre">Nombre</label>
+                                        <input type="text" name="u" id="" class="form-control">
+                                    </div>
+                                    <div class="col">
+                                        <label for="inputModelo">Contrasena</label>
+                                        <input type="password" name="c" id="" class="form-control">
+                                    </div>
+                                    <div class="col d-flex align-items-end">
+                                        <button type="button" value="Ingresar" class="btn btn-success w-100" onclick="ingreso(this.form)">Ingresar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-secondary text-white py-5">
+        <div class="container">
+            <div id="box-opciones" class="row row-cols-1 row-cols-xl-2">
+                <div class="col mb-3" id="mali">
+                    <div class="card bg-dark flex-row rounded-3">
+                        <div class="card-body w-50">
+                            <h2 class="card-text mb-0 text-capitalize" id="nombre"> Usuario: Mali</h2>
+                            <h4 class="card-text mb-0 text-capitalize">Saldo</h4>
+                            <p class="card-text mb-3 text-capitalize">Consultar Saldo</p>
+                            <p class="card-text mb-3 text-capitalize">Saldo: <input type="text" name="Cantidad1" id="C1" value="200"> </p>
+                            <div class="col d-flex align-items-end">
+                                <button class="btn btn-primary w-100">Consulte su saldo</button>
+                            </div>
+                            <h3 class="card-text mb-0 text-capitalize">Ingreso de monto</h3>
+                            <p class="card-text mb-3 text-capitalize">Monto realizado: <p id="monto" value="Cant"> </p> </p>
+                            <label for="inputModelo">Cantidad</label>
+                            <input type="text" name="" id="Cant" class="form-control" placeholder="Cantidad">
+                            <div class="col d-flex align-items-end">
+                                <button class="btn btn-primary w-100" value="Ingreso de monto" id="bt2" onclick="formula1()">Ingresar Monto</button>
+                            </div>
+                            <h3 class="card-text mb-0 text-capitalize">Retirar Monto</h3>
+                            <p class="card-text mb-3 text-capitalize">Cantidad retirada: <p id="retiro"> </p> </p>
+                            <label for="inputModelo">Cantidad</label>
+                            <input name="" id="Cant2" class="form-control" placeholder="Cantidad2">
+                            <div class="col d-flex align-items-end">
+                                <button class="btn btn-danger w-100" value="Retirar" id="bt3" onclick="formula2()">Retirar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
